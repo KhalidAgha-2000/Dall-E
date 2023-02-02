@@ -20,7 +20,7 @@ export default function CreatePost() {
     if (form.prompt) {
       try {
         setGeneratingImg(true)
-        const response = await axios.post('http://localhost:5000/api/v1/dalle/generateImage',
+        const response = await axios.post('https://dall-e-server.onrender.com/api/v1/dalle/generateImage',
           { prompt: form.prompt }
         )
         const data = await response.data
@@ -54,7 +54,7 @@ export default function CreatePost() {
       setLoading(true)
       try {
 
-        const response = await axios.post('http://localhost:5000/api/v1/posts/create-post',
+        const response = await axios.post('https://dall-e-server.onrender.com/api/v1/posts/create-post',
           { name: form.name, prompt: form.prompt, photo: form.photo }
         )
         console.log('data', response);

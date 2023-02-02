@@ -19,7 +19,7 @@ const Home = () => {
     // ---- All Posts
     const getAllPosts = async () => {
       setLoading(true)
-      await axios.get('http://localhost:5000/api/v1/posts/all-posts')
+      await axios.get('https://dall-e-server.onrender.com/api/v1/posts/all-posts')
         .then((response) => setPosts(response.data.data))
         // .then(() => console.log('ll', posts))
         .catch(console.error())
