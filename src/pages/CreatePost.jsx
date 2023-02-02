@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import Loader from '../components/Loader'
-import { preview } from "../assets/index";
 import FormField from '../components/FormField'
-import { getRandomPrompt } from "../utils/index";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import Header from '../components/Header';
+import { preview } from '../assets/index';
+import { getRandomPrompt } from '../utils/index';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 export default function CreatePost() {
 
   const navigate = useNavigate()

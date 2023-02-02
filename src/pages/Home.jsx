@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react"
-import Loader from "../components/Loader"
-import FormField from "../components/Formfield"
-import Card from "../components/Card"
-import Header from "../components/Header"
-import axios from "axios"
+import { useEffect, useState } from 'react'
+import Loader from '../components/Loader'
+import FormField from '../components/FormField'
+import Card from '../components/Card'
+import Header from '../components/Header'
+import axios from 'axios'
 
 
 const Home = () => {

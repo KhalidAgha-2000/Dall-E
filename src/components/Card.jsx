@@ -1,7 +1,7 @@
 import { download } from "../assets";
 import { downloadImage } from "../utils";
 
-export const Card = ({ _id, name, prompt, photo }) => {
+const Card = ({ _id, name, prompt, photo }) => {
 
     return (
         <div
