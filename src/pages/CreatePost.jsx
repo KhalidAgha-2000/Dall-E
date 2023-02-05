@@ -25,11 +25,8 @@ export default function CreatePost() {
           { prompt: form.prompt }
         )
         const data = await response.data
-        // console.log('data', data);
 
         setForm({ ...form, photo: data.photo })
-        // setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` })
-        // console.log(data);
       } catch (error) {
         setAlertErrorGenerateImage('Oops! Something went wrong, Try again')
         setInterval(() => {
@@ -58,7 +55,6 @@ export default function CreatePost() {
         const response = await axios.post('https://dall-e-server.onrender.com/api/v1/posts/create-post',
           { name: form.name, prompt: form.prompt, photo: form.photo }
         )
-        // console.log('data', response);
         navigate('/')
       } catch (error) {
         setAlertErrorGenerateImage('Oops! Something went wrong, Try again')

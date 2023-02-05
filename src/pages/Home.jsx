@@ -21,7 +21,6 @@ const Home = () => {
       setLoading(true)
       await axios.get('https://dall-e-server.onrender.com/api/v1/posts/all-posts')
         .then((response) => setPosts(response.data.data))
-        // .then(() => console.log('ll', posts))
         .catch(console.error())
         .finally(setLoading(false))
     }
